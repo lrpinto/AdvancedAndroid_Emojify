@@ -60,9 +60,9 @@ class Emojifier {
             for (int i = 0; i < faces.size(); ++i) {
                 Face face = faces.valueAt(i);
 
-                // Log the classification probabilities for each face.
+                // COMPLETED (6): Change the call to getClassifications to whichEmoji() to log the appropriate emoji for the facial expression.
                 whichEmoji(face);
-                // TODO (6): Change the call to getClassifications to whichEmoji() to log the appropriate emoji for the facial expression.
+
             }
 
         }
