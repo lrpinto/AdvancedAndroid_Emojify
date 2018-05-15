@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.example.android.emojify"
         minSdkVersion 15
@@ -17,15 +17,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:design:25.2.0'
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    // TODO (1): Add Google Mobile Vision Library dependency
-    testCompile 'junit:junit:4.12'
+    implementation 'com.android.support:design:25.2.0'
+    implementation 'com.android.support:appcompat-v7:25.2.0'
+
+    // COMPLETE (1): Add Google Mobile Vision Library dependency
+    implementation 'com.google.android.gms:play-services-vision:15.0.2'
+    testImplementation 'junit:junit:4.12'
 }
